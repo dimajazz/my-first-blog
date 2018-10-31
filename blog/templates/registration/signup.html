@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  {% if registered %}
+        <h2>Thank you for registering!</h2>
+  {% else %}
+    <h2>Register Here</h2>
+    <h4>Just fill out the form.</h4>
+
+    <div class="registration">
+        <form enctype="multipart/form-data" method="POST" class="registration">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <button type="submit" class="site-button">Sign up</button>
+        </form>
+    </div>
+  {% endif %}
+{% endblock %}

@@ -63,3 +63,16 @@ h2, h3, h4 {
  margin: 10px;
  float: right;
 }
+
+.comment {
+    margin: 20px 0px 40px 20px;
+    font-family: 'Comic Sans MS';
+}
+
+. registration {
+    font-family: 'Comic Sans MS';
+}
+
+.img-circle {
+    border-radius: 50%;
+}
